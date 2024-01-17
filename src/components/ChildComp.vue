@@ -7,4 +7,10 @@
 const props = defineProps({
     msg: String
 })
+
+// Declare les évènements émis
+const emit = defineEmits(['response'])
+
+// emit avec un argument
+emit('response', "hello à partir de l'enfant")
 </script>
