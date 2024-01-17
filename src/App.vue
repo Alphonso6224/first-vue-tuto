@@ -7,7 +7,10 @@ const childMsg = ref('Pas encore de message de l\'enfant')
 </script>
 
 <template>
-  <ChildComp @response="(msg) => childMsg = msg" :msg="greating"/>
+  <!-- <ChildComp @response="(msg) => childMsg = msg" :msg="greating"/> -->
+  <ChildComp>
+    {{ greating }}
+  </ChildComp>
   <p>{{ childMsg }}</p>
 </template>
 

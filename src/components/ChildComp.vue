@@ -1,6 +1,5 @@
 <template>
-    <h2>Un composant enfant!</h2>
-    <p>{{ msg || 'Aucune prop passée pour le moment'}}</p>
+    <slot>Contenue de secours</slot>
 </template>
 
 <script setup>
