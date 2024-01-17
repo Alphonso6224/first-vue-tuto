@@ -1,25 +1,21 @@
 <script setup>
 import { ref } from 'vue';
 
-// Déclaration d'une référenche de chaîne
-const count = ref(0);
+import { onMounted } from 'vue';
 
-// Met à jour le state du component
-function increment() {
-  count.value+=2; // Ajout de 2 à chaque click à la variable count
-}
+const pElementRef = ref(null);
+
+onMounted(() => {
+  // le composant est maintenant monté
+  pElementRef.value.textContent = "monté !";
+})
 
 </script>
 
 <template>
-  <!-- Rendez ce bouton fonctionnel -->
-  <button @click="increment">
-    count à : {{ count }}
-  </button>
+  <p ref="pElementRef">hello</p>
 </template>
 
 <style scoped>
-.title {
-  color: red;
-}
+
 </style>
