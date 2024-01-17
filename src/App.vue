@@ -2,15 +2,20 @@
 import { ref } from 'vue';
 
 // Déclaration d'une référenche de chaîne
-const message = ref('Hello World');
+const count = ref(0);
 
-const titleClass = ref('title')
+// Met à jour le state du component
+function increment() {
+  count.value+=2; // Ajout de 2 à chaque click à la variable count
+}
 
 </script>
 
 <template>
-  <h1 :id="dynamicId" :class="titleClass">Passez moi en rouge</h1>
-  <p>{{ titleClass }}</p>
+  <!-- Rendez ce bouton fonctionnel -->
+  <button @click="increment">
+    count à : {{ count }}
+  </button>
 </template>
 
 <style scoped>
